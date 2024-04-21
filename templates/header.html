@@ -2,5 +2,14 @@
 	<div class="nav-link" url="/">Home</div>
 	<div class="nav-link" url="/projects.html">Projects</div>
 	<div class="nav-link" url="/quotes.html">Quotes</div>
-	<script src="/static/scripts/nav_links.js"></script>
+	<script>
+		function nav(url) {
+			return "window.location.href = '" + url + "'";
+		}
+
+		var nav_links = document.getElementsByClassName("nav-link");
+		for (var i = 0; i < nav_links.length; i++) {
+			nav_links[i].setAttribute("onclick", nav(nav_links[i].getAttribute("url")));
+		}
+	</script>
 </header>
