@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Trenton Burnes (Gruficlath) - Quotes</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="static/styles/styles.css">
+	</head>
+
+	<script src="static/scripts/templatey.js"></script>
+
+	<body>
+		<script>load_template("header", document.currentScript)</script>
+		<main>
+			<h2>I like quotes, so I present to you my quote collection.</h2>
+			<blockquote>
+				C is a chainsaw with all the safefies removed.<br>
+				Don't worry though, if you lose a finger or hand, C will give you another<br>
+				(Another chainsaw that is)<br>
+				- <a href="https://stackoverflow.com/questions/3536153/c-dynamically-growing-array" target="_blank">Jaco Van Niekerk (Feb 25, 2022)</a>
+			</blockquote>
+			
+			<blockquote>
+				If you don't know how to unzip a file,<br>
+				get someone who knows how to use a computer to help you.<br>
+				- <a href="https://github.com/tModLoader/tModLoader/wiki/tModLoader-guide-for-players#manual-installation" target="_blank">JavidPack (May 30, 2020)</a>
+			</blockquote>
+
+			<blockquote>
+				Using C without pointers is like using a car without fuel.<br>
+				- <a href="https://stackoverflow.com/questions/3536153/c-dynamically-growing-array" target="_blank">martinkunec (Dec 2, 2017)</a>
+			</blockquote>
+
+			<h2>Submit your own quotes!</h2>
+			<form name="quote_submit" action="" method="POST">
+				<label for="quote">Quote</label>
+				<textarea rows="3" cols="40" name="quote" class="quote-input"></textarea>
+
+				<label for="author">Author</label>
+				<input name="author" class="author-input">
+				
+				<label for="date">Date</label>
+				<input type="date" name="date" class="date-input">
+
+				<input type="button" name="submit" class="submit" style="margin-top: 1em;" value="Submit" onclick="submit_quote(this.form)">
+			</form>
+			<script>
+				function submit_quote(form) {
+					let form_data = new FormData(form);
+					const form_entries = Object.fromEntries(form_data)
+
+					fetch('https://quotes-submitter.shuttleapp.rs',
+						{
+							method: "POST",
+							mode: "no-cors",
+							headers: {
+								"Content-Type": "application/json",
+							},
+							body: JSON.stringify(form_entries)
+						}
+					)
+				}
+			</script>
+		</main>
+		<script>load_template("footer", document.currentScript)</script>
+	</body>
+</html>

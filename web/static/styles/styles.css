@@ -1,0 +1,233 @@
+@import url("/static/styles/glitchcandy.css");
+
+@font-face {
+	font-family: scientifica;
+	src: url(/static/fonts/scientifica.woff);
+}
+@font-face {
+	font-family: scientificaItalic;
+	src: url(/static/fonts/scientificaItalic.woff);
+}
+@font-face {
+	font-family: scientificaBold;
+	src: url(/static/fonts/scientificaBold.woff);
+}
+
+* {
+	background-color: var(--bg);
+	color: var(--fg);
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	margin: 1em;
+	flex-grow: 1;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: scientificaBold;
+}
+
+button {
+	border-style: double;
+	border-width: 0.5em;
+	border-color: var(--fg-alt);
+	background-color: var(--bg-alt);
+	padding: 0.75em;
+}
+button:hover {
+	border-color: var(--orange);
+	color: var(--accent);
+	background-color: var(--fg);
+	font-style: italic;
+}
+
+p {
+	font-family: scientifica;
+	font-size: 1.5em;
+	max-width: 50em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+i {
+	font-family: scientificaItalic;
+	font-style: normal;
+}
+
+a {
+	font-family: scientificaItalic;
+}
+a:link {
+	color: var(--cyan);
+}
+a:visited {
+	color: var(--purple);
+}
+a:hover {
+	color: var(--orange);
+}
+
+blockquote {
+	font-family: scientifica;
+	font-size: 1.5em;
+	background-color: var(--bg-alt);
+	padding: 0.75em;
+}
+blockquote a {
+	background-color: var(--bg-alt);
+}
+
+label {
+	display: block;
+	width: 100%;
+	font-family: scientificaBold;
+	font-size: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+input,textarea {
+	display: block;
+	background-color: var(--bg-alt);
+	border: solid var(--fg) 0.2em;
+	font-family: scientifica;
+	font-size: 1.5em;
+	margin-left: auto;
+	margin-right: auto;
+}
+input:focus,textarea:focus {
+	border-color: var(--purple);
+}
+input:hover,textarea:hover {
+	border-color: var(--orange);
+	background-color: var(--fg-alt);
+}
+
+header {
+	background-color: var(--bg-alt);
+	margin: 0 0 1em 0;
+	padding: 0;
+	border-bottom: var(--fg) solid 0.3em;
+	width: 100%;
+	height: 2em;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+header .nav-link {
+	background-color: var(--bg-alt);
+	width: 15%;
+	min-width: 5em;
+	max-width: 13em;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: scientificaBold;
+	font-size: 1.7em;
+}
+header .nav-link:hover {
+	background-color: var(--fg-alt);
+	color: var(--orange);
+}
+
+.profile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.profile-image {
+	width: 10em;
+}
+.profile h1,h2,h3,h4,h5,h6 {
+	margin: 0.1em auto;
+	width: 100%;
+	text-align: center;
+}
+
+.project-card {
+	background-color: var(--bg-alt);
+	padding: 0.75em;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.project-card .project-name {
+	display: block;
+	background-color: var(--bg-alt);
+	width: 100%;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	text-decoration: none;
+	font-size: 2.5em;
+}
+.project-card .project-desc {
+	background-color: var(--bg-alt);
+	display: block;
+	background-color: var(--bg-alt);
+	width: 100%;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+.project-desc a {
+	background-color: var(--bg-alt);
+}
+
+.icon {
+	color: var(--fg);
+	text-decoration: none;
+}
+.icon:visited {
+	color: var(--fg);
+}
+.icon:link {
+	color: var(--fg);
+}
+
+footer {
+	background-color: var(--bg-alt);
+	padding: 0;
+	border-top: var(--fg) solid 0.3em;
+	width: 100%;
+	padding-bottom: 0.1em;
+	margin-bottom: 0;
+}
+footer h6 {
+	font-size: 1em;
+	font-family: scientificaItalic;
+	background-color: var(--bg-alt);
+	margin: 0;
+	padding-top: 0.1em;
+}
+footer h6 a {
+	background-color: var(--bg-alt);
+	margin: 0;
+	width: 100%;
+}
+footer .social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-color: var(--bg-alt);
+	padding-top: 0.5em;
+}
+footer .social .icon {
+	background-color: var(--bg-alt);
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}

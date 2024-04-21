@@ -1,0 +1,20 @@
+<footer>
+	<script src="https://kit.fontawesome.com/a980f0f361.js" crossorigin="anonymous"></script>
+	<h6>© <div id="copyright-year"></div> Trenton Burnes</h6>
+	<div class="contact">
+		<h6><a href="mailto:trentonburnes@protonmail.com" target="_blank">trentonburnes@protonmail.com</a></h6>
+	</div>
+	<div class="social">
+		<a href="https://github.com/GlitchyCrafting" target="_blank" class="fa-brands fa-github icon"></a>
+		<a href="https://mastodon.social/@GlitchyCrafting" target="_blank" class="fa-brands fa-mastodon icon"></a>
+		<a href="https://gruficlath.itch.io" target="_blank" class="fa-brands fa-itch-io icon"></a>
+	</div>
+	<script>
+		const date = new Date();
+		const year = date.getFullYear();
+
+		let copyright_year = document.getElementById("copyright-year");
+		copyright_year.insertAdjacentHTML("afterend", year);
+		copyright_year.remove();
+	</script>
+</footer>
