@@ -1,16 +1,16 @@
-@import url("static/styles/glitchcandy.css");
+@import url("glitchcandy.css");
 
 @font-face {
 	font-family: scientifica;
-	src: url(/static/fonts/scientifica.woff);
+	src: url(scientifica.woff);
 }
 @font-face {
 	font-family: scientificaItalic;
-	src: url(/static/fonts/scientificaItalic.woff);
+	src: url(scientificaItalic.woff);
 }
 @font-face {
 	font-family: scientificaBold;
-	src: url(/static/fonts/scientificaBold.woff);
+	src: url(scientificaBold.woff);
 }
 
 * {
