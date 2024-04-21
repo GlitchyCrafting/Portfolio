@@ -2,15 +2,15 @@
 
 @font-face {
 	font-family: scientifica;
-	src: url(scientifica.woff);
+	src: url(../fonts/scientifica.woff);
 }
 @font-face {
 	font-family: scientificaItalic;
-	src: url(scientificaItalic.woff);
+	src: url(../fonts/scientificaItalic.woff);
 }
 @font-face {
 	font-family: scientificaBold;
-	src: url(scientificaBold.woff);
+	src: url(../fonts/scientificaBold.woff);
 }
 
 * {
