@@ -47,6 +47,25 @@
 				<input type="button" name="submit" class="submit" id="submit" style="margin-top: 1em;" value="Submit" onclick="submit_quote(this.form)">
 			</form>
 			<script>
+				function submit_quote(form) {
+					let form_data = new FormData(form);
+					const form_entries = Object.fromEntries(form_data)
+					console.log(form_entries);
+
+					fetch('https://quotes-submitter.shuttleapp.rs',
+						{
+							method: "POST",
+							mode: "no-cors",
+							headers: {
+								"Content-Type": "application/json",
+							},
+							body: JSON.stringify(form_entries)
+						}
+					)
+				}
+			</script>
+			<!-- Will implement later. For now, screaming into the void works just fine. -->
+			<!-- <script>
 				const CLIENT_ID = "263841981216-jiac050ugot23gslj1at569pvc7fdhpm.apps.googleusercontent.com";
 				const API_KEY = "AIzaSyD2vdDKk18-Aja2biL6j8FJvCEtPtAcZgQ";
 
@@ -134,7 +153,7 @@
 						return;
 					}
 				}
-			</script>
+			</script> -->
 		</main>
 		<script>load_template("footer", document.currentScript)</script>
 
