@@ -1,0 +1,39 @@
+@import url("glitchcandy.css");
+
+footer {
+	background-color: var(--bg-alt);
+	padding: 0;
+	border-top: var(--fg) solid 0.3em;
+	width: 100%;
+	padding-bottom: 0.1em;
+	margin-bottom: 0;
+	position: sticky;
+	bottom: 0;
+}
+footer h6 {
+	font-size: 1em;
+	font-family: scientificaItalic;
+	background-color: var(--bg-alt);
+	margin: 0;
+	padding-top: 0.1em;
+	text-align: center;
+	width: 100%;
+}
+footer h6 a {
+	background-color: var(--bg-alt);
+	margin: 0;
+	width: 100%;
+}
+footer .social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-color: var(--bg-alt);
+	padding-top: 0.5em;
+}
+footer .social .icon {
+	background-color: var(--bg-alt);
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}

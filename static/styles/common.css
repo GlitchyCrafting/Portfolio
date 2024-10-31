@@ -1,0 +1,89 @@
+@import url("glitchcandy.css");
+
+@font-face {
+	font-family: scientifica;
+	src: url(../fonts/scientifica.woff);
+}
+@font-face {
+	font-family: scientificaItalic;
+	src: url(../fonts/scientificaItalic.woff);
+}
+@font-face {
+	font-family: scientificaBold;
+	src: url(../fonts/scientificaBold.woff);
+}
+
+* {
+	background-color: var(--bg);
+	color: var(--fg);
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	margin: 1em;
+	flex-grow: 1;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: scientificaBold;
+	width: 100%;
+	text-align: center;
+}
+
+button {
+	border-style: double;
+	border-width: 0.5em;
+	border-color: var(--fg-alt);
+	background-color: var(--bg-alt);
+	padding: 0.75em;
+}
+button:hover {
+	border-color: var(--orange);
+	color: var(--accent);
+	background-color: var(--fg);
+	font-style: italic;
+}
+
+p {
+	font-family: scientifica;
+	font-size: 1.5em;
+	max-width: 50em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+i {
+	font-family: scientificaItalic;
+	font-style: normal;
+}
+
+a {
+	font-family: scientificaItalic;
+}
+a:link {
+	color: var(--cyan);
+}
+a:visited {
+	color: var(--purple);
+}
+a:hover {
+	color: var(--orange);
+}
+
+.icon {
+	color: var(--fg);
+	text-decoration: none;
+}
+.icon:visited {
+	color: var(--fg);
+}
+.icon:link {
+	color: var(--fg);
+}

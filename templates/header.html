@@ -1,15 +1,6 @@
 <header>
-	<div class="nav-link" url="/Portfolio">Home</div>
-	<div class="nav-link" url="/Portfolio/projects.html">Projects</div>
-	<div class="nav-link" url="/Portfolio/quotes.html">Quotes</div>
-	<script>
-		function nav(url) {
-			return "window.location.href = '" + url + "'";
-		}
-
-		var nav_links = document.getElementsByClassName("nav-link");
-		for (var i = 0; i < nav_links.length; i++) {
-			nav_links[i].setAttribute("onclick", nav(nav_links[i].getAttribute("url")));
-		}
-	</script>
+	<link rel="stylesheet" href="static/styles/header.css">
+	<a href="/Portfolio">Home</a>
+	<a href="/Portfolio/projects.html">Projects</a>
+	<a href="/Portfolio/quotes.html">Quotes</a>
 </header>
