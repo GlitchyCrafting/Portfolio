@@ -23,7 +23,7 @@ function exec_script(elem) {
 function load_template(name, replace = null) {
 	var site = window.location.origin;
 	if (site == null || site == "null") { site = ""; }
-	var path = site + "/templates/" + String(name) + ".html";
+	var path = site + "/Portfolio/templates/" + String(name) + ".html";
 
 	var xhr = new XMLHttpRequest();
 	xhr.onreadystatechange = function() {
