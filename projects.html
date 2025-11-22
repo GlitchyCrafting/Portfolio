@@ -7,10 +7,16 @@
 		<link rel="stylesheet" href="static/styles/projects.css">
 	</head>
 
-	<script src="static/scripts/templatey.js"></script>
+	<!-- <script src="static/scripts/templatey.js"></script> -->
 
 	<body>
-		<script>load_template("header", document.currentScript)</script>
+		<header>
+			<link rel="stylesheet" href="static/styles/header.css">
+			<a href="/Portfolio">Home</a>
+			<a href="/Portfolio/projects.html">Projects</a>
+			<!-- <a href="/Portfolio/quotes.html">Quotes</a> -->
+		</header>
+
 		<main>
 			<h2>Here's some projects I've worked on.</h2>
 			<div class="project-card">
@@ -31,6 +37,26 @@
 				<p class="project-desc">A little tutorial for the students at <a href="https://sictc.evscschools.com" target="_blank">SICTC</a> on how to use <a href="https://www.vim.org" target="_blank">Vim</a>. It also details how to install plugins and sets up a few useful ones.</p>
 			</div>
 		</main>
-		<script>load_template("footer", document.currentScript)</script>
+
+		<footer>
+			<link rel="stylesheet" href="static/styles/footer.css">
+			<script src="https://kit.fontawesome.com/a980f0f361.js" crossorigin="anonymous"></script>
+			<h6>© <div id="copyright-year"></div> Trenton Burnes</h6>
+			<div class="contact">
+				<h6><a href="mailto:trentonburnes@protonmail.com" target="_blank">trentonburnes@protonmail.com</a></h6>
+			</div>
+			<div class="social">
+				<a href="https://github.com/GlitchyCrafting" target="_blank" class="fa-brands fa-github icon"></a>
+				<a href="https://linkedin.com/in/gruficlath" target="_blank" class="fa-brands fa-linkedin icon"></a>
+			</div>
+			<script>
+				const date = new Date();
+				const year = date.getFullYear();
+
+				let copyright_year = document.getElementById("copyright-year");
+				copyright_year.insertAdjacentHTML("afterend", year);
+				copyright_year.remove();
+			</script>
+		</footer>	
 	</body>
 </html>
